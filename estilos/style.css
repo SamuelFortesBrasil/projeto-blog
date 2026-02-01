@@ -59,6 +59,15 @@ a{
     
 }
 
+.comentarios{
+    padding: 5px;
+    margin: 5px;
+    text-align: justify;
+    background-color: var(--cards);
+    border: 3px solid var(--bordas);
+    box-shadow: 1px 1px 5px rgba(22, 22, 22, 0.808);
+}
+
 
 .links{
     display: inline-block;
@@ -76,12 +85,27 @@ a{
     cursor: pointer;
 }
 
+form > div{
+    display: flex;
+    flex-direction: column;
+}
+
+form > div > label{
+    padding: 2px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+
 input,textarea{
     border: 2px solid var(--bordas);
     margin: 5px;
     padding: 5px;
     border-radius: 3px;
+    width: 50%;
 }
+
 
 input[type="submit"]{
     margin: 5px 10px;

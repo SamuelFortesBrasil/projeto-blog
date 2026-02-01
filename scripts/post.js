@@ -2,9 +2,12 @@ const endpoint = "https://jsonplaceholder.typicode.com/posts"
 const main = document.querySelector('#post-container')
 const aguarde = document.getElementById('aguarde')
 const divDoPost = document.getElementById('post')
+const sectionComentarios = document.getElementById('comentarios')
 
 const urlBrowser = window.location.search
 const urlcontida = urlBrowser.slice(4)
+//console.log(urlBrowser)
+//console.log(urlcontida)
 //Pega Valores da API e recupera o valor do Array para exibição de um só post
 
 async function RecuperarPost() {
@@ -13,7 +16,7 @@ async function RecuperarPost() {
         const dados = await resposta.json()
         aguarde.style.display = 'none'
         //Desativa Msg inicial
-        console.log(dados[urlcontida-1])
+        //console.log(dados[urlcontida-1])
         // Pega os dados de posts da API, porém com base na url contida pega somente um dos 100 posts.
         main.style.display = 'block'
 
@@ -35,9 +38,67 @@ async function RecuperarPost() {
 }
 //Preenchido a página com o post recuperado!
 
-const btVoltar = document.getElementById('voltar')
+//Função para pegar os comentários do post especifico recuperado acima
+const criandoComentario = (c) =>{
+    const div = document.createElement('div')
+    div.classList.add('comentarios')
+    const titulo = document.createElement('h4')
+    const corpo = document.createElement('p')
+    
+    titulo.innerText = c.email
+    corpo.innerText = c.body
+    div.appendChild(titulo)
+    div.appendChild(corpo)
+    sectionComentarios.appendChild(div)
+}
+async function pegandoComentarios(id) {
+    const resposta = await fetch(`${endpoint}/${id}/comments`)
+    const dados = await resposta.json()
+  //  console.log(dados)
+    
+    
+    dados.map((comentario)=>{
+            criandoComentario(comentario)
+    })
+}
+
+//Fim da Função-------------------------------------------------------------
+
+//Programando meu Próprio Formulário
+const formcomentario = document.querySelector('#meu-comentario')
+const email = document.querySelector('#email')
+const corpoComentario = document.querySelector('#body')
 
 
+async function enviarcomentario(comentario) {
+    const resposta = await fetch(`${endpoint}/${urlcontida}/comments`,{
+        method: "POST",
+        body: comentario,
+        headers:{
+            "Content-type":"application/json",
+        }
+    })
+    const dado = await resposta.json()
+    criandoComentario(dado)
+}
+
+formcomentario.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    let comentario = {
+        email: email.value,
+        body: corpoComentario.value
+    }
+    comentario = JSON.stringify(comentario)
+    
+    enviarcomentario(comentario)
+    email.value = ''
+    corpoComentario.value = ''
+})
 
 
 RecuperarPost()
+pegandoComentarios(urlcontida) //OK, não sei ao certo o porque de eu não poder colocar o -1 para o primeiro post da API, então se eu o removo tudo funciona como esperado.
+
+//Entendi, os post são armazenados nos index do JSON, começando do 0
+
+// Os comentários são armazenados somente nos ID, esses tendo contagem inical a partir do 1.

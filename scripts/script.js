@@ -5,8 +5,7 @@ const aguarde = document.getElementById('aguarde')
 async function PegarPost() {
     const resposta = await fetch(endpoint)
     const dados = await resposta.json()
-    // Teste de Funcionamentoconsole.log(dados)
-    console.log(dados)
+   // console.log(dados)
     aguarde.style.display = 'none'
     //Fetch para adquirir os 100 posts da API
     dados.map((post)=>{
