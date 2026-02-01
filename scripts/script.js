@@ -20,7 +20,7 @@ async function PegarPost() {
         titulo.innerText = post.title
         corpoPost.innerText = post.body
         link.innerText = "Ver Mais"
-        link.setAttribute('href',`/posts.html?id=${post.id}`)
+        link.setAttribute('href',`posts.html?id=${post.id}`)
         //Pinagem de conteúdo
 
         div.appendChild(titulo)
