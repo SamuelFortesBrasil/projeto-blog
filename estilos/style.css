@@ -1,0 +1,99 @@
+/* Outfit - Títulos Roboto - Corpo */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --fundo : #F8FAFC;
+    --cards: #FFFFFF;
+    --texto-principal: #1E293B;
+    --destaque: #3B82F6;
+    --bordas: #E2E8F0;
+}
+
+/* 
+    Tema Dark, uso mais tarde...
+
+    Fundo	#0F172A	Um azul quase preto (melhor que o preto puro).
+
+    Superfície (Cards)	#1E293B	Azul marinho profundo para destacar do fundo.
+    
+    Texto Principal	#F1F5F9	Branco gelo para não ofuscar.
+
+    Destaque (Acentuação)	#F472B6	Rosa vibrante para botões e detalhes.
+
+    Bordas/Divisores	#334155	Cinza azulado para delimitar seções.
+*/
+
+body{
+    background-color: var(--fundo);
+    padding: 15px;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Outfit',Arial, Helvetica, sans-serif;
+    color: var(--texto-principal)
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/*Configs Globais*/
+
+.posts{
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+    background-color: var(--cards);
+    border: 3px solid var(--bordas);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(22, 22, 22, 0.808);
+    
+}
+
+
+.links{
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 5px;
+    color: var(--texto-principal);
+    background-color: var(--destaque);
+    border-radius: 5px;
+    transition: color 0.4s, background-color 0.4s ease;
+}
+
+.links:hover{
+    color: var(--cards);
+    background-color: var(--texto-principal);
+    cursor: pointer;
+}
+
+input,textarea{
+    border: 2px solid var(--bordas);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+input[type="submit"]{
+    margin: 5px 10px;
+    padding: 5px;
+    color: var(--texto-principal);
+    background-color: var(--destaque);
+    border-radius: 5px;
+    transition: color 0.4s, background-color 0.4s ease;   
+}
+
+input[type="submit"]:hover{
+    color: var(--cards);
+    background-color: var(--texto-principal);
+    cursor: pointer;
+}
