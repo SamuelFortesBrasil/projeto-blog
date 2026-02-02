@@ -53,8 +53,73 @@ a{
 
 /*Configs Globais*/
 
+/*Formatação de Add Amizades*/
+
+#amizades{
+    display: flex;
+    justify-content: space-between;
+}
+
+#viewport{
+    margin: 5px;
+    box-shadow: 1px 0px 5px rgb(41,41,41);
+    overflow: hidden;
+}
+
+#container-carrosel{
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.itemCarrosel{
+    margin: 10px 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 3px solid var(--bordas);
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgb(41, 41, 41);
+}
+
+.adicionar{
+    margin: 5px;
+    font-weight: normal;
+    background-color: var(--destaque);
+    color: var(--texto-principal);
+    font-size: 12px;
+    align-self: center;
+    box-shadow: 1px 1px 4px rgb(41, 41, 41);
+    transition: background-color 0.4s, color 0.4s ease;
+}
+
+.adicionar > i{
+    font-size: 14px;
+}
+
+.adicionar:hover{
+    background-color: var(--texto-principal);
+    color: var(--fundo);
+    cursor: pointer;
+}
+
+button{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease;
+}
+
+button:hover{
+    background-color: var(--destaque);
+}
+
+/*Fim */
+
 header{
     display: flex;
+    padding: 5px;
     position: sticky;
     top: 0;
     justify-content: space-between;
@@ -75,7 +140,7 @@ nav > ul > li > a{
     transition: color 0.4s ease;
 }
 
-nav > ul > li > a:hover{
+nav > ul > li > a > i:hover{
     color: var(--texto-principal);
 }
 

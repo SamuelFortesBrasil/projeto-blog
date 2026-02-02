@@ -60,12 +60,12 @@ const Perfil=[
 ] 
 
 async function PegarPost() {
-    const resposta = await fetch(endpoint)
+    const resposta = await fetch(`${endpoint}?_limit=11`)
     const dados = await resposta.json()
     //console.log(dados)
     aguarde.style.display = 'none'
     //Fetch para adquirir os 100 posts da API
-    dados.filter((post)=> post.id <= 11).map((post)=>{
+    dados.map((post)=>{
         const div = document.createElement('div')
         div.classList.add('posts')
         const titulo = document.createElement('h2')
