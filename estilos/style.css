@@ -30,6 +30,11 @@
     Bordas/Divisores	#334155	Cinza azulado para delimitar seções.
 */
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 body{
     background-color: var(--fundo);
     padding: 15px;
@@ -48,7 +53,61 @@ a{
 
 /*Configs Globais*/
 
+header{
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    background-color: var(--fundo);
+    transition: background-color 0.4s ease;
+    align-items: center;
+
+}
+
+nav > ul{
+    display: flex;
+    gap: 10px;
+}
+
+nav > ul > li > a{
+    font-size: 20px;
+    color: var(--destaque);
+    transition: color 0.4s ease;
+}
+
+nav > ul > li > a:hover{
+    color: var(--texto-principal);
+}
+
+.divPerfil{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.divPerfil > h4{
+    font-size: 20px ;
+}
+
+.imagemPerfil{
+    border-radius: 50%;
+    border: 2px solid var(--destaque);
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.divPerfil > p{
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
 .posts{
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     margin: 10px;
     text-align: justify;
@@ -71,6 +130,7 @@ a{
 
 .links{
     display: inline-block;
+    text-align: center;
     margin: 5px 10px;
     padding: 5px;
     color: var(--texto-principal);
@@ -85,6 +145,18 @@ a{
     cursor: pointer;
 }
 
+.iconInteracao{
+    margin: 5px;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.iconInteracao:hover{
+    cursor: pointer;
+}
+
+
+/*Formatações para segunda página*/
 form > div{
     display: flex;
     flex-direction: column;
