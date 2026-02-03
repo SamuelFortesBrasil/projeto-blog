@@ -25,7 +25,7 @@ async function Amigos() {
             if(adicionar.innerHTML == `<i class="bi bi-person-fill-add"></i> adicionar amizade`){
                 adicionar.innerHTML = `<i class="bi bi-person-fill-check"></i> adicionado`
             }else{
-                adicionar.innerHTML = `<i class="bi bi-person-fill-add"></i> adicionar`
+                adicionar.innerHTML = `<i class="bi bi-person-fill-add"></i> adicionar amizade`
             }
         })
 
