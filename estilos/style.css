@@ -258,3 +258,33 @@ input[type="submit"]:hover{
     background-color: var(--texto-principal);
     cursor: pointer;
 }
+
+/* Formatação da página de Login */
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--cards);
+    border: 3px solid var(--bordas);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(41, 41, 41);
+}
+
+.formLogin > div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#criarConta{
+    color: var(--destaque);
+    transition:  color 0.4s ease;
+}
+
+#criarConta:hover{
+    color: var(--texto-principal);
+    cursor: pointer;
+}
