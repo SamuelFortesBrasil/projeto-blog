@@ -37,7 +37,6 @@ html{
 
 body{
     background-color: var(--fundo);
-    padding: 15px;
 }
 
 h1,h2,h3,h4{
@@ -119,10 +118,11 @@ button:hover{
 header{
     display: flex;
     padding: 10px;
+    width: 100%;
     position: sticky;
     top: 0;
     justify-content: space-between;
-    background-color: var(--fundo);
+    background-color: var(--bordas);
     transition: background-color 0.4s ease;
     align-items: center;
 
@@ -141,6 +141,10 @@ nav > ul > li > a{
 
 nav > ul > li > a > i:hover{
     color: var(--texto-principal);
+}
+
+main{
+    padding: 15px;
 }
 
 .divPerfil{
@@ -257,12 +261,21 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
+
 /* Formatação da página de Login */
+
+#pagLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 .formLogin{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     margin: 5px;
     padding: 5px;
     background-color: var(--cards);
@@ -285,4 +298,16 @@ input[type="submit"]:hover{
 #criarConta:hover{
     color: var(--texto-principal);
     cursor: pointer;
+}
+
+
+/* O footer */
+footer{
+    background-color: var(--bordas);
+    padding: 15px;
+    transition: background-color 0.4s ease;
+}
+
+footer > p{
+    padding: 5px;
 }

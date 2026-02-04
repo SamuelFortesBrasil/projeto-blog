@@ -17,7 +17,11 @@
     /* Media para Página Inicial*/
 
     /* Media para paǵina Secundária de Comentários*/
-    
-    
+     input,textarea{
+        width: 95%;
+    }
+
+    /*Media pra página de login */
+     
 }
 
