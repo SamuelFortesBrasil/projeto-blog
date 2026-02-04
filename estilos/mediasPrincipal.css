@@ -1,0 +1,23 @@
+@media screen and (max-width: 576px) {
+    nav > ul > li > a{
+        font-size: 25px;
+    }
+    .divPerfil > h4{
+        font-size: 18px;
+    }
+    
+    h2{
+        font-size: 18px;
+    }
+
+    .divPerfil > p{
+        text-align: center;
+    }
+
+    /* Media para Página Inicial*/
+
+    /* Media para paǵina Secundária de Comentários*/
+    
+    
+}
+

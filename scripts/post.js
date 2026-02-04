@@ -10,6 +10,8 @@ const urlcontida = urlBrowser.slice(4)
 //console.log(urlcontida)
 //Pega Valores da API e recupera o valor do Array para exibição de um só post
 
+import { Perfil } from "./script.js"
+
 async function RecuperarPost() {
     try{
         const resposta = await fetch(endpoint)
@@ -20,6 +22,29 @@ async function RecuperarPost() {
         // Pega os dados de posts da API, porém com base na url contida pega somente um dos 100 posts.
         main.style.display = 'block'
 
+        //Recuperando o perfil do post-----------------------------
+        const divPerfil = document.createElement('div')
+        divPerfil.classList.add('divPerfil')
+
+        const imgPerfil = document.createElement('img')
+        imgPerfil.classList.add('imagemPerfil')
+        imgPerfil.setAttribute('src',`imagens/${Perfil[urlcontida-1].foto}`)
+
+
+
+        const nomePerfil = document.createElement('h4')
+        const recado = document.createElement('p')
+
+        nomePerfil.innerText = Perfil[urlcontida-1].nome
+        recado.innerText = Perfil[urlcontida-1].recado
+
+        divPerfil.appendChild(imgPerfil)
+        divPerfil.appendChild(nomePerfil)
+        divPerfil.appendChild(recado)
+
+  
+        //Fim------------------------------------------------------
+
         //Criando Elementos
         const titulo = document.createElement('h2')
         const corpo = document.createElement('p')
@@ -28,6 +53,7 @@ async function RecuperarPost() {
         corpo.innerText = dados[urlcontida-1].body  //método, mais achei fácil
         
         //Pinando Filhos aos Pais
+        divDoPost.appendChild(divPerfil)
         divDoPost.appendChild(titulo)
         divDoPost.appendChild(corpo)
         divDoPost.classList.add('posts')

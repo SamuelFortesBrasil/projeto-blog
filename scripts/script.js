@@ -59,6 +59,9 @@ const Perfil=[
     }
 ] 
 
+export {Perfil} //Exportar para carregar na página de comentários
+
+
 async function PegarPost() {
     const resposta = await fetch(`${endpoint}?_limit=11`)
     const dados = await resposta.json()
@@ -167,5 +170,6 @@ async function PegarPost() {
 }
 
 
-
-PegarPost()
+if(main){
+    PegarPost()
+}

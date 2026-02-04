@@ -72,13 +72,12 @@ a{
 }
 
 .itemCarrosel{
-    margin: 10px 2px;
+    margin: 10px 0px;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    min-width: 100%;
     border: 3px solid var(--bordas);
-    border-radius: 5px;
     box-shadow: 0px 1px 2px rgb(41, 41, 41);
 }
 
@@ -119,7 +118,7 @@ button:hover{
 
 header{
     display: flex;
-    padding: 5px;
+    padding: 10px;
     position: sticky;
     top: 0;
     justify-content: space-between;
@@ -137,7 +136,7 @@ nav > ul{
 nav > ul > li > a{
     font-size: 20px;
     color: var(--destaque);
-    transition: color 0.4s ease;
+    transition: co0lor 0.4s ease;
 }
 
 nav > ul > li > a > i:hover{
@@ -166,7 +165,6 @@ nav > ul > li > a > i:hover{
 
 .divPerfil > p{
     font-weight: bold;
-    padding-top: 5px;
     font-size: 12px;
 }
 

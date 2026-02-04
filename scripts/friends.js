@@ -16,9 +16,9 @@ async function Amigos() {
         const adicionar = document.createElement('button')
         adicionar.classList.add('adicionar')
 
-        username.innerText = e.username
-        site.innerText = e.website
-        email.innerText = e.email
+        username.innerText = "Nome: " +  e.username
+        site.innerText = "Site: " + e.website
+        email.innerText = "Email: " +  e.email
         adicionar.innerHTML = `<i class="bi bi-person-fill-add"></i> adicionar amizade`
 
         adicionar.addEventListener('click',()=>{
@@ -41,19 +41,20 @@ async function Amigos() {
 const btVoltar = document.getElementById('voltar')
 const btAvancar = document.getElementById('avancar')
 
+
 btAvancar.addEventListener('click',()=>{
     index++
-    container.style.transform = `translateX(${ -200 * index}px)`
+    container.style.transform = `translateX(${ -325 * index}px)`
     if(index >= 10){
         index = 0
-        container.style.transform = `translateX(${ -200 * index}px)`
+        container.style.transform = `translateX(${ -325 * index}px)`
     }
 })
 
 btVoltar.addEventListener('click',()=>{
     if(index > 0){
         index--
-        container.style.transform = `translateX(${ -200 * index}px)`
+        container.style.transform = `translateX(${ -100 * index}px)`
     }
 })
 
