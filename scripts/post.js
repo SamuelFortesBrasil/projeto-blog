@@ -20,7 +20,7 @@ async function RecuperarPost() {
         //Desativa Msg inicial
         //console.log(dados[urlcontida-1])
         // Pega os dados de posts da API, porém com base na url contida pega somente um dos 100 posts.
-        main.style.display = 'block'
+        
 
         //Recuperando o perfil do post-----------------------------
         const divPerfil = document.createElement('div')

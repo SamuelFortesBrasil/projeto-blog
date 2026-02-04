@@ -63,8 +63,53 @@
     /* Fim Página Principal*/
     
     /*Começo Página de Comentário*/
+        #post-container{
+            display: grid;
+            grid-template-columns: 50px 90vw 50px;
+            grid-template-rows: auto auto auto auto;
+        }
 
+        #post-container > h3{
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+        }
+
+        #post{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2 ;
+        }
+
+        #comentarios{
+            grid-column-start: 2 ;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: -1;
+        }
+
+      input,textarea{
+          width: 70%;
+        }
+
+        
     /*Fim Página de Comentário */
+
+    .formLogin{
+        width: 70%;
+    }
+
+    input{
+        font-size: 20px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    #criar,#enviar{
+        width: 70%;
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 1500px){
@@ -94,5 +139,64 @@
         display: grid;
         grid-template-columns: 350px 60vw 350px ;
         grid-template-rows: auto auto auto;
-    }   
+    }  
+    /* Fim Página Principal*/
+    
+    /*Começo Página de Comentário*/
+        #post-container{
+            display: grid;
+            grid-template-columns: 350px 60vw 350px;
+            grid-template-rows: auto auto auto;
+        }
+
+        #post-container > h3{
+            font-size: 2em;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+        }
+
+        #voltar{
+            font-size: 1.5em;
+        }
+
+        #post{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2 ;
+        }
+
+        #comentarios{
+            grid-column-start: 2 ;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: -1;
+        }
+
+
+      input,textarea{
+          width: 70%;
+        }
+
+        form > div > label{
+         font-size: 1.2em;
+    }
+        
+    /*Fim Página de Comentário */ 
+
+    /*Página Login*/
+    .formLogin{
+        width: 60%;
+    }
+
+    input{
+        margin: 5px;
+        padding: 10px;
+    }
+
+    #criar,#enviar{
+        width: 60%;
+        font-size: 20px;
+    }
 }
