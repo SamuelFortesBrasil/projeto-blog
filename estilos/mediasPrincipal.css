@@ -25,3 +25,74 @@
      
 }
 
+
+@media screen and (min-width: 992px){
+    h1{
+        font-size: 3em;
+    }
+
+     nav > ul > li > a{
+        font-size: 35px;
+    }
+
+    #posts-container{
+        margin: 5px;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 50px 90vw 50px ;
+        grid-template-rows: auto auto auto;
+    }
+    #amizades{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin: auto;
+        width: 50%;
+     
+    }
+
+    .posts{
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+    }
+
+    #subtitle{
+        text-align: center;
+        padding: 5px;
+    }
+    /* Fim Página Principal*/
+    
+    /*Começo Página de Comentário*/
+
+    /*Fim Página de Comentário */
+}
+
+@media screen and (min-width: 1500px){
+    h1{
+        font-size: 3.2em;
+    }
+
+     nav > ul > li > a{
+        font-size: 38px;
+    }
+
+    .itemCarrosel > h4,p{
+        font-size: 1.4em;
+    }
+
+    .adicionar{
+        font-size: 18px;
+    }
+
+    .adicionar > i{
+        font-size: 18px;
+    }
+
+    #posts-container{
+        margin: 5px;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 350px 60vw 350px ;
+        grid-template-rows: auto auto auto;
+    }   
+}
