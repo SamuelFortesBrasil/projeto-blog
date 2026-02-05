@@ -3,6 +3,18 @@ const main = document.querySelector('main')
 const aguarde = document.getElementById('aguarde')
 
 
+import{body,item} from "./tema.js"
+
+
+window.addEventListener('load',()=>{
+    if(item){
+        body.classList.add('dark-mode')
+    }else{
+        body.classList.remove('dark-mode')
+    }
+})
+
+
 function criarLogin() {
     main.innerHTML = ''
     const form = document.createElement('form')
@@ -13,8 +25,8 @@ function criarLogin() {
     const user = localStorage.getItem('user')
     const senha = localStorage.getItem('senha')
 
-    console.log(user)
-    console.log(senha)
+   // console.log(user)
+   // console.log(senha)
 
 
 

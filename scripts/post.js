@@ -11,6 +11,9 @@ const urlcontida = urlBrowser.slice(4)
 //Pega Valores da API e recupera o valor do Array para exibição de um só post
 
 import { Perfil } from "./script.js"
+import{body,item} from "./tema.js"
+
+
 
 async function RecuperarPost() {
     try{
@@ -41,10 +44,10 @@ async function RecuperarPost() {
         divPerfil.appendChild(imgPerfil)
         divPerfil.appendChild(nomePerfil)
         divPerfil.appendChild(recado)
-
+        
   
         //Fim------------------------------------------------------
-
+        
         //Criando Elementos
         const titulo = document.createElement('h2')
         const corpo = document.createElement('p')
@@ -83,7 +86,7 @@ async function pegandoComentarios(id) {
   //  console.log(dados)
     
     
-    dados.map((comentario)=>{
+  dados.map((comentario)=>{
             criandoComentario(comentario)
     })
 }
@@ -121,9 +124,20 @@ formcomentario.addEventListener('submit',(e)=>{
     corpoComentario.value = ''
 })
 
+window.addEventListener('load',()=>{
+    if(item){
+        body.classList.add('dark-mode')
+    }else{
+        body.classList.remove('dark-mode')
+    }
+})
+//Carregamento de Tema
+
 
 RecuperarPost()
 pegandoComentarios(urlcontida) //OK, não sei ao certo o porque de eu não poder colocar o -1 para o primeiro post da API, então se eu o removo tudo funciona como esperado.
+
+
 
 //Entendi, os post são armazenados nos index do JSON, começando do 0
 

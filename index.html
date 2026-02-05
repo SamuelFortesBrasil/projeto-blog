@@ -42,20 +42,6 @@
     </footer>
     <script src="scripts/friends.js"></script>
     <script src="scripts/script.js" type="module"></script>
-    <script type="module">
-        const tema = document.getElementById('tema')
-        const body = document.querySelector('body')
-        tema.addEventListener('click',()=>{
-            if(tema.classList.contains('bi-moon-fill')){
-                tema.classList.remove("bi-moon-fill")
-                tema.classList.add("bi-sun-fill")
-                body.classList.add("dark-mode")
-            }else{
-                tema.classList.remove("bi-sun-fill")
-                tema.classList.add("bi-moon-fill")
-                body.classList.remove("dark-mode")
-            }
-        })
-    </script>
+    <script src="scripts/tema.js" type="module"></script>
 </body>
 </html>

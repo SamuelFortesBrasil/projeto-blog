@@ -39,7 +39,13 @@ body{
 
 h1,h2,h3,h4{
     font-family: 'Outfit',Arial, Helvetica, sans-serif;
-    color: var(--texto-principal)
+    color: var(--texto-principal);
+    transition: color 0.4s ease;
+}
+
+p{
+    color: var(--texto-principal);
+    transition: color 0.4s ease;
 }
 
 a{
