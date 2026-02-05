@@ -16,19 +16,16 @@
     --bordas: #E2E8F0;
 }
 
-/* 
-    Tema Dark, uso mais tarde...
 
-    Fundo	#0F172A	Um azul quase preto (melhor que o preto puro).
+.dark-mode {
+    --fundo: #0F172A;
+    --cards: #1E293B;
+    --texto-principal: #F1F5F9;
+    --destaque: #F472B6;
+    --bordas: #334155;
+}
 
-    Superfície (Cards)	#1E293B	Azul marinho profundo para destacar do fundo.
-    
-    Texto Principal	#F1F5F9	Branco gelo para não ofuscar.
 
-    Destaque (Acentuação)	#F472B6	Rosa vibrante para botões e detalhes.
-
-    Bordas/Divisores	#334155	Cinza azulado para delimitar seções.
-*/
 
 html{
     scroll-behavior: smooth;
@@ -37,6 +34,7 @@ html{
 
 body{
     background-color: var(--fundo);
+    transition: background-color 0.4s ease;
 }
 
 h1,h2,h3,h4{
